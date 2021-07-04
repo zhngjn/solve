@@ -11,4 +11,6 @@ void MergeSortBU(int* a, int l, int r);
 
 Slist<int>* MergeSortAB(Slist<int>* c);
 
+Slist<int>* MergeSortQ(Slist<int>* c);
+
 } // namespace alg

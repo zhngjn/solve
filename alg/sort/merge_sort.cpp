@@ -1,4 +1,5 @@
 #include <vector>
+#include <queue>
 
 #include "merge_sort.h"
 
@@ -124,6 +125,31 @@ link MergeSortAB(link c) {
     c->next = nullptr;
 
     return MergeAB(MergeSortAB(a), MergeSortAB(b));
+}
+
+link MergeSortQ(link c) {
+    if (c == nullptr)
+        return c;
+
+    std::queue<link> q;
+    link n;
+    while (c) {
+        n = c->next;
+        c->next = nullptr;
+        q.push(c);
+        c = n;
+    }
+    link t = q.front();
+    q.pop();
+    while (!q.empty()) {
+        q.push(t);
+        link a = q.front();
+        q.pop();
+        link b = q.front();
+        q.pop();
+        t = MergeAB(a, b);
+    }
+    return t;
 }
 
 } // namespace alg

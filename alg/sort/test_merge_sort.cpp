@@ -30,4 +30,12 @@ int main() {
         assert(IsSlistSorted(list2));
         DeleteSlist(list2);
     }
+
+    for (int i = 0; i < 100; i++) {
+        Array<int> a(1000, 0, 1000000);
+        Slist<int>* list = MakeSlist(a);
+        Slist<int>* list2 = MergeSortQ(list);
+        assert(IsSlistSorted(list2));
+        DeleteSlist(list2);
+    }
 }

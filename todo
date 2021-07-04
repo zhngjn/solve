@@ -5,7 +5,15 @@ bazel 3rd party
 heap
 heap sort
 
-merge sort queue
-
 radix 3
+
+array
+random
+
+bcc
+
+BTree
+
+pre/in/post construct tree
+pre/in/post it
 
