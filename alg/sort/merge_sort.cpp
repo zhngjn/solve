@@ -78,7 +78,7 @@ void MergeSortBitonic(int* a, int l, int r) {
     MergeBitonic(a, l, m, r);
 }
 
-void MergeSortAB(int *a, int* aux, int l, int r) {
+void MergeSortAB(int* a, int* aux, int l, int r) {
     if (l >= r)
         return;
 
